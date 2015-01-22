@@ -31,7 +31,13 @@ LAYOUT & GRID STYLES
 HEADER STYLES
 *********************/
 
-.header {}
+.header {
+	font-size: 3em;
+	text-align: center;
+	#outer-header{
+		margin: 0px 15px 0px 15px;
+	}
+}
 
 	#logo {}
 
@@ -41,6 +47,7 @@ NAVIGATION STYLES
 
 .nav {
 	border: 0;
+	font-size: 0.7em;
 	ul {
 		background:$black;
 		margin-top:0;

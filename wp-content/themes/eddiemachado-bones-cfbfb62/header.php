@@ -29,6 +29,10 @@
 		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
             <meta name="theme-color" content="#121212">
 
+    <?php // Google Fonts ?>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+    <?php // end Google Fonts ?>
+
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
 		<?php // wordpress head functions ?>
@@ -45,33 +49,40 @@
 		<div id="container">
 
 			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+        <div id="outer-header" >
+          <ul class="social_links">
+            <li><a href="http://www.facebook.com/indestructibleart" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/facebook.png" /></a></li>
+            <li><a href="http://www.twitter.com/pixelstopanels" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/twitter.png" /></a></li>
+            <li><a href="http://www.twitch.tv/indestructibleart" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/twitch.png" /></a></li>
+            <li><a href="http://www.vimeo.com/indestructibleart" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/vimeo.png" /></a></li>
+            <li><a href="http://www.youtube.com/user/IndestructibleArt" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/youtube.png" /></a></li>
+            <li><a href="http://bit.ly/iapodcast" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/images/itunes.png" /></a></li>
+          </ul>
+  				<div id="inner-header" class="wrap cf">
 
-				<div id="inner-header" class="wrap cf">
+  					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
+  					<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
 
-					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
-					<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
-
-					<?php // if you'd like to use the site description you can un-comment it below ?>
-					<?php // bloginfo('description'); ?>
+  					<?php // if you'd like to use the site description you can un-comment it below ?>
+  					<?php //bloginfo('description'); ?>
 
 
-					<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-						<?php wp_nav_menu(array(
-    					         'container' => false,                           // remove nav container
-    					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
-    					         'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
-    					         'menu_class' => 'nav top-nav cf',               // adding custom nav class
-    					         'theme_location' => 'main-nav',                 // where it's located in the theme
-    					         'before' => '',                                 // before the menu
-        			               'after' => '',                                  // after the menu
-        			               'link_before' => '',                            // before each link
-        			               'link_after' => '',                             // after each link
-        			               'depth' => 0,                                   // limit the depth of the nav
-    					         'fallback_cb' => ''                             // fallback function (if there is one)
-						)); ?>
+  					<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+  						<?php wp_nav_menu(array(
+      					         'container' => false,                           // remove nav container
+      					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
+      					         'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
+      					         'menu_class' => 'nav top-nav cf',               // adding custom nav class
+      					         'theme_location' => 'main-nav',                 // where it's located in the theme
+      					         'before' => '',                                 // before the menu
+          			               'after' => '',                                  // after the menu
+          			               'link_before' => '',                            // before each link
+          			               'link_after' => '',                             // after each link
+          			               'depth' => 0,                                   // limit the depth of the nav
+      					         'fallback_cb' => ''                             // fallback function (if there is one)
+  						)); ?>
 
-					</nav>
-
-				</div>
-
+  					</nav>
+  				</div>
+        </div>
 			</header>
